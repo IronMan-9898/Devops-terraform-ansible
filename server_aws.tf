@@ -14,6 +14,7 @@ resource "aws_instance" "myawsserver" {
   ami = "ami-04b4f1a9cf54c11d0"     #Ubuntu
   vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
   instance_type = "t2.micro"
+  subnet_id = "subnet-055be645d6be87d8a"
   key_name = "abhijeet-import"
 
   tags = {
