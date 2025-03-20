@@ -14,12 +14,12 @@ resource "aws_instance" "myawsserver" {
   ami = "ami-04b4f1a9cf54c11d0"     #Ubuntu
   vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
   instance_type = "t2.micro"
-  key_name = "raman-import"
+  key_name = "abhijeet-import"
 
   tags = {
-    Name = "raman-DevOps-batch-server"
+    Name = "JenkinsEC2"
     env = "Production"
-    owner = "Raman"
+    owner = "abhijeet"
   }
   provisioner "local-exec" {
     command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /tmp/inv"
