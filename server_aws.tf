@@ -18,7 +18,7 @@ resource "aws_instance" "myawsserver" {
   key_name = "abhijeet-import"
 
   tags = {
-    Name = "JenkinsEC2"
+    Name = "MyNewEC2ByTF"
     env = "Production"
     owner = "abhijeet"
   }
